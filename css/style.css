@@ -1,70 +1,78 @@
 body {
-	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	font-family: roboto;
 }
 
-html {
-	font-size: 10px;
+img {
+	max-width: 100%;
 }
 
-a:active, a:visited, a:focus {
-	outline: none;
-	text-decoration: none;
-} 
-
-.wrapper {
-	display:table-cell;
-	vertical-align:middle;
-}
-
-.main {
-	position: relative;
-	display: table;
-	width: 100%;
-	text-align: center;
+header {
+	padding-top: 59px;
+	background-color: #3a7dfd;
 	color: #fff;
-	height: 100vh; /*задает значение на весь экран*/
-	background: #000 url(../img/main-font.jpg) center center no-repeat;
+	/*height: 100vh;*/
 }
 
-  .main-overlay {
-  	position: absolute;
-  	z-index: 1;
-  	width: 100%;
-  	height: 100%;
-  	background-color: rgba(0,0,0,0.5);
-  }
+.headr-pretitle {
+	font-size: 18px;
+	margin-top: 102px;
+}
 
-  .main h1 {
-  	margin-bottom: 8px;
-  	font-weight: 300;
-  	text-transform: uppercase;
-  	font-size: 3rem;
-  }
+.titel-hider {
 
-  .main p {
-  	font-size: 1.8rem;
-  	font-weight: 300;
-  }
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 46.81px;
+	margin-top: 15px;
+}
 
-    .main-headr {
-    	position: relative;
-    	z-index: 2;
-    }
+.headr-img {
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
 
-  .main-line {
-  	width: 180px;
-  	height: 1px;
-  	background-color: #fff;
-  	margin: 0 auto;
-  }
+.headr-subtitle {
+	font-size: 18px;
+	margin-top: 20px;
+}
 
-  .main-down {
-  	position: absolute;
+.header-button {
+	
+	box-shadow: 10px 17px 34px 6px rgba(18, 61, 145, 0.83);
+	border-radius: 50px;
+	background-color: #fff;
+	border: none;
+	color: #072b6f;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 12px 50px;
+	margin-top: 23px;
+	
+}
+
+.header-button:hover {
+	cursor: pointer;
+	
+}
+
+header small {
+	font-size: 12px;
+	display: block;
+	text-align: center;
+	margin-top: 6px;
+}
+
+.headr-button-block {
+	max-width: 190px;
+}
+
+.main-down {
+	position: absolute;
   	color: #fff;
-  	bottom: 2rem;
+  	bottom: 18px;
   	display: inline-block;
-  	font-size: 2rem;
-  	z-index: 4;
+  	font-size: 18px;
   	width: 50px;
   	height: 50px;
   	border-radius: 50%;
@@ -72,157 +80,203 @@ a:active, a:visited, a:focus {
     line-height: 50px;
   	left: 50%;
   	margin-left: -25px;
-  	transition: 0.2s;
-  }
+  	text-align: center;
+  	vertical-align: content;
+    transition: 0.5s;
 
-    .main-down:hover {
-    	color: #fff;
-    	border-color: #fff;
-    }
+}
 
+.main-down:hover {
+	color: #fff;
+border-color: #fff;
+}
 
-/**Секция с портфолио**/
+/*Секция портфолио*/
 
 .portfolio {
-	padding: 10rem 0px;
-	text-align: center;
-}
-
-.section-header {
-	text-transform: uppercase;
-	font-weight: 800;
-	font-size: 3.6rem;
-	text-align: center;
-	margin-bottom: 5rem;
-}
-
-.portfolio img {
-	width: 100%;
-	max-width: 360px;
-	box-shadow: 0px 4px 29px 0px rgba(87, 92, 97, 0.54);
-}
-
-.portfolio a {
-	display: block;
-	margin: 2rem auto 5rem;
-	width: 17rem;
-	color: #333;
-	border-bottom: 1px solid transparent;
+	background-color: #ddd;
+	padding-top: 44px;
+	padding-bottom: 71px;
 } 
 
-   .portfolio a:hover {
-   	text-decoration: none;
-   	border-bottom: 1px dotted #333;
+.portfolio-block {
+	background-color: #fff;
+	padding-top: 29px;
+	padding-bottom: 44px;
+}
 
-   }
+.portfolio-title{
+ text-transform: uppercase;
+ font-size: 18px;
+ color: #072b6f;
+ margin-bottom: 5px;
+}
 
-/**Секция подвал**/
+.portfolio-subtitle {
+	margin-top: 5px;
+	margin-bottom: 30px;
+	font-size: 14px;
+	color: #7bb9ff;
+}
 
-.footer {
-	background-color: #646464;
-	color: #fff;
+.portfolio-title, .portfolio-subtitle {
 	text-align: center;
-	padding: 2rem 0;
 }
 
-  .footer strong {
-  	font-weight: 300;
-  	font-size: 2.4rem;
-  }
-
-.social-links {
-	margin-top: 1rem;
-
+.portfolio-col-1 {
+	padding-left: 50px;
+	
 }
 
-   .social-links a {
-     width: 5rem;
-     height: 5rem;
-     line-height: 5rem;  /**Высота строки**/
-     display: inline-block;
-     color: #fff;
-     border: 1px solid #fff;
-     border-radius: 50%;
-     margin-left: 1rem;
-     margin-right: 1rem;
-     font-size: 2rem;
-     -webkit-transition: 0.2s;
-     -o-transition: 0.2s;
-     transition: 0.2s;
-
-   }
-
-      .social-links a:hover {
-      	background-color: #fff;
-      	color: #646464;
-
-
-      }
-
-.offer-btn {
-	display: block;
-	width: 80%;
-	max-width: 200px;
-	margin: 1rem auto;
-	border: 1px solid #fff;
-	border-radius: 100px;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	color: #fff;
-    -webkit-transition: 0.2s;
-     -o-transition: 0.2s;
-     transition: 0.2s;
+.portfolio-col-2 {
+	
+	padding-right: 50px;
 }
 
-   .offer-btn:hover {
-   	text-decoration: none;
-   	 background-color: #fff;
-     color: #646464;
-      }
-   
-.modal img {
-	width: 100%;
-}
-
-.modal-title {
-	font-weight: 800;
-	font-size: 2rem;
-}
-
-.close {
-	background-color: transparent;
-	border: none;
-	font-size: 2rem;
-	position: absolute;
-	right: 1.5rem;
-	top: 1rem;
-}
-
-.modal-btn {
-	display: inline-block;
-	border: 1px solid #333;
-	padding: 10px 20px;
-	text-align: center;
-	font-size: 1.2rem;
+.portfolio-block h3 {
+	color: #072b6f;
+	font-size: 18px;
+	font-weight: 700;
 	text-transform: uppercase;
-	text-decoration: none;
-	color: #333;
+}
+
+.portfolio-text {
+	color: #8f8f8f;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.portfolio-block a {
+	color: #072b6f;
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+
+/*Оформление футера*/
+
+footer {
+	background-color: #3a7dfd;
+	color: #fff;
+	padding-top: 60px;
+	padding-bottom: 110px;
+}
+
+.kontakt-block {
+	text-align: center;
+}
+
+.footer-auther {
+	font-size: 24px;
+	margin-bottom: 7px;
+}
+
+.footer-text {
+	margin-top: 0;
+}
+
+.sociol-block {
+	text-align: center;
+}
+
+.sociol-block a {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	
+}
+
+
+
+.sociol-block a:hover {
+	cursor: pointer;
+
+}
+.footer-cta-block {
+	text-align: center;
+}
+
+.footer-cta {
+	margin-bottom: 12px;
+}
+
+.footer-button {
+	display: inline-block;
+	border: 1px solid #fff;
+	background-color: transparent;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 50px;
+	padding: 10px 40px;
 	transition: 0.3s;
 }
 
-   .modal-btn:hover {
-   	background-color: #333;
-   	color: #fff;
-   	text-decoration: none;
-   }
+.footer-button:hover {
+	cursor: pointer;
+	color: #3a7dfd;
+	background-color: #fff;
 
-@media (min-width: 0px) and (max-width: 480px) {
-	html {
-		font-size: 7px;
+}
+
+@media (max-width: 1200px){
+	.dan-cont {
+	margin-top: 102px;
+}
+}
+
+@media (max-width: 992px) {
+	.headr-img {
+		display: none;
 	}
 
-	.footer strong {
-		margin: 2rem 0;
-		display: inline-block;
+	.headr-pretitle {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.dan-cont {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+.footer-auther {
+	font-size: 18px;
+}
+
+.footer-text {
+	font-size: 14px;
+}
+
+.sociol-block a {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.sociol-block img {
+	width: 30px;
+}
+
+.footer-button {
+	font-size: 14px;
+	padding: 8px 35px;
+}
+
+}
+
+@media (max-width: 768px) {
+	.portfolio-col-1 {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 20px;
+	}
+
+	.portfolio-col-2 {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	footer {
+		padding-top: 10px;
+		padding-bottom: 15px;
 	}
 }
