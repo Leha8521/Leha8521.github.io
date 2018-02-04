@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/fontello-embedded.css">
+    <link rel="stylesheet" href="css/animate.css">
 
 </head>
 <body>
@@ -26,19 +27,19 @@
  	<div class="container">
  		<div class="row">
  			<div class="col-lg-7">
- 				<img class="headr-img" src="img/main-img.png" alt="Компьютер">
+ 				<img class="headr-img wow fadeInLeft" src="img/main-img.png" alt="Компьютер">
  			</div>
  			<!-- /.col-7 -->
  			<div class="col-lg-5">
-                <div class="dan-cont">
-                    <p class="headr-pretitle">Веб разработчик</p>
-                <h1 class="titel-hider">Акунишников Алексей</h1>
-                <p class="headr-subtitle">Верстка на HTML/CSS <br>Разработка сайтов под ключ</p>
-                <div class="headr-button-block">
-                    <a href="https://vk.com/id318274835" class="header-button">Связаться</a>
-                <small>*Это бесплатно</small>
-                </div>
-                </div>
+                
+                <p class="headr-pretitle wow fadeInRight" data-wow-delay="0.1s">Веб разработчик</p>
+                <h1 class="titel-hider wow fadeInRight" data-wow-delay="0.2s">Акунишников Алексей</h1>
+                <p class="headr-subtitle wow fadeInRight" data-wow-delay="0.3s">Верстка на HTML/CSS <br>Разработка сайтов под ключ</p>
+               
+                <a href="https://vk.com/id318274835" class="header-button wow fadeInRight"  data-wow-delay="0.4s">Связаться</a>
+                <small class="wow fadeInRight" data-wow-delay="0.5s">*Это бесплатно</small>
+                
+               
  				
  			</div>
  			<!-- /.col-5 -->
@@ -96,10 +97,10 @@
              <div class="col-md-4">
                  <div class="sociol-block">
                      <p>Подпишитесь:</p>
-                     <a href="#"><img src="img/social/facebook-logo.png" alt="Facebook"></a>
-                     <a href="#"><img src="img/social/telegram-logo.png" alt="Telegram"></a>
-                     <a href="#"><img src="img/social/vk-logo.png" alt="Вконтакте"></a>
-                     <a href="#"><img src="img/social/youtybe-logo.png" alt="YouTube"></a>
+                     <a href="#"><img class="wow zoomIn" data-wow-delay="0.1s" src="img/social/facebook-logo.png" alt="Facebook"></a>
+                     <a href="#"><img class="wow zoomIn" data-wow-delay="0.1s" src="img/social/telegram-logo.png" alt="Telegram"></a>
+                     <a href="https://vk.com/id318274835"><img class="wow zoomIn" data-wow-delay="0.1s" src="img/social/vk-logo.png" alt="Вконтакте"></a>
+                     <a href="#"><img class="wow zoomIn" data-wow-delay="0.1s" src="img/social/youtybe-logo.png" alt="YouTube"></a>
                  </div>
              </div>
              <div class="col-md-4">
@@ -113,6 +114,9 @@
 
  </footer>
 
-
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 </body>
 </html>

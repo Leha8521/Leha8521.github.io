@@ -49,18 +49,20 @@ header {
 	font-weight: 700;
 	padding: 12px 50px;
 	margin-top: 23px;
+	transition: 0.3s;
 	
 }
 
 .header-button:hover {
 	cursor: pointer;
+	box-shadow: none;
 	
 }
 
 header small {
 	font-size: 12px;
 	display: block;
-	text-align: center;
+	padding-left: 50px;
 	margin-top: 6px;
 }
 
