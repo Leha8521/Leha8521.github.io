@@ -1,122 +1,179 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     <meta name="description" content="Сайт по информационным технологиям">
-     <meta name="author" content="Акунишников Алексей">
-     
-     <link rel="icon" href="gimp.ico">
-
-	<title>Мой первый сайт</title>
-    <!-- Шрифты Google -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet"> 
-	
-	<link href="css/bootstrap-grid.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/fontello-embedded.css">
-    <link rel="stylesheet" href="css/animate.css">
-
+	<meta charset="UTF-8">
+	<title>Выборы</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<!-- Main Page -->
+	<div class="main">
+		<div class="main-cards">
+			<div class="main-cards-item main-cards-item-active">
+				<div class="candidate-block">
+					<div class="photo photo-1"></div>
+					<div class="result">
+						<div class="result-count">35%</div>
+						<div class="progress">
+							<div class="progress-bar progress-bar-1"></div>
+						</div>
+					</div>
+				</div>
+				<div class="name">Иванов
+				Виктор Иванович</div>
+				<div class="age">38 лет</div>
+				Пол:
+				<div class="sex">Мужской</div>
+				Полит. взгляды:
+				<div class="views">Левые</div>
+				Биография
+				<div class="bio">13 декабря 2016 года объявил, что намерен баллотироваться на президентских выборах 2018 года, опубликовал основные положения своей предвыборной программы и начал собирать сторонников</div>
+			</div>
+			<div class="main-cards-item ">
+				<div class="candidate-block">
+					<div class="photo photo-2"></div>
+					<div class="result">
+						<div class="result-count">65%</div>
+						<div class="progress">
+							<div class="progress-bar progress-bar-2"></div>
+						</div>
+					</div>
+				</div>
+				<div class="name">петрова
+				ирина сергеевна</div>
+				<div class="age">45 лет</div>
+				Пол:
+				<div class="sex">Женский</div>
+				Полит. взгляды:
+				<div class="views">Либеральные</div>
+				Биография
+				<div class="bio">Ко всем прочим заслугам можно отнести ее активную гражданскую позицию. Еще в конце 2011-го, после выборов в Государственную думу, вошла в десятку самых влиятельных российских женщин, рейтинг которой был составлен радиостанцией «Эхо Москвы»..</div>
+			</div>
+		</div>
+		<div class="main-buttons">
+			<div id="reset" class="btn">сбросить результаты</div>
+			<div id="voting" class="btn">провести честное
+			голосование</div>
+			<div id="crime" class="btn">вмешаться в выборы</div>
+		</div>
+	</div>
 
- <header>
- 	<div class="container">
- 		<div class="row">
- 			<div class="col-lg-7">
- 				<img class="headr-img wow fadeInLeft" src="img/main-img.png" alt="Компьютер">
- 			</div>
- 			<!-- /.col-7 -->
- 			<div class="col-lg-5">
-                
-                <p class="headr-pretitle wow fadeInRight" data-wow-delay="0.1s">Веб разработчик</p>
-                <h1 class="titel-hider wow fadeInRight" data-wow-delay="0.2s">Акунишников Алексей</h1>
-                <p class="headr-subtitle wow fadeInRight" data-wow-delay="0.3s">Верстка на HTML/CSS <br>Разработка сайтов под ключ</p>
-               
-                <a href="https://vk.com/id318274835" class="header-button wow fadeInRight"  data-wow-delay="0.4s">Связаться</a>
-                <small class="wow fadeInRight" data-wow-delay="0.5s">*Это бесплатно</small>
-                
-               
- 				
- 			</div>
- 			<!-- /.col-5 -->
- 		</div>
- 		<!-- /.row -->
+	<!-- Popup -->
+	<div class="overlay">
+	 		<div class="popup">
+				<div class="popup-title">не доволен прошедшими выборами?</div>
+				<div class="popup-subtitle">создай своего кандидата</div>
+				<button id="popup-btn" class="popup-btn">создать</button>
+	 		</div>
+	</div>
 
- 	</div>
- 	<!-- /.container -->
-    <!--  <a href="#port" class="main-down"><i class="icon-down"></i></i></a>  -->
- </header>
+	<!-- Customization -->
+	<div class="custom">
+		<div class="custom-info">
+			<label for="name">Фамилия Имя Отчество</label>
+			<input type="text" id="name">
+			<label for="age">Возраст, лет</label>
+			<input type="text" id="age">
+			<div class="radio">
+				<input value="Мужской" id="male" checked name="sex" type="radio">
+				<label for="sex">Мужчина</label>
+				<input value="Женский" id="female" name="sex" type="radio">
+				<label for="sex">Женщина</label>
+			</div>
+			<select id="select">
+				<option value="Либеральные">Либеральные</option>
+				<option value="Левые">Левые</option>
+				<option value="Правые">Правые</option>
+			</select>	
+			<label for="bio">Биография</label>
+			<textarea name="bio" id="bio" cols="40" rows="8"></textarea>
+		</div>
 
- <section class="portfolio" id="port">
-    <div class="container">
-        <div class="portfolio-block">
-           <h2 class="portfolio-title" >Портфолио</h2>
-          <p class="portfolio-subtitle">Мои работы</p>
+		<div class="custom-char">
+			
+			<div class="person-easy"></div>
 
-         <div class="row">
-             <div class="col-md-6">
-                <div class="portfolio-col-1">
-                    <img src="img/porfolio-img-1.jpg" alt="Газпром">
-                 <h3 ">внутренний университет «Газпром нефти»</h3>
-                 <p class="portfolio-text">У «Газпром нефти» есть внутренний Корпоративный университет для сотрудников. Это настоящий университет, где сотрудники проходят обучение у внутренних тренеров компании или у специально приглашенных лекторов и экспертов....</p>
-                 <a href="#">Смотреть работу</a>
-                </div>
-                 
-             </div>
-             <!-- /.col-6 -->
-             <div class="col-md-6">
-                 <div class="portfolio-col-2">
-                     <img src="img/pottfolio-img-1.jpg" alt="Газпром">
-                 <h3>Сайт платежной системы «Мир»</h3>
-                 <p class="portfolio-text">Обновленная версия сайта знакомит посетителей с компаниями, уже принимающими карты к оплате, и приглашает всех остальных присоединиться к проекту...</p>
-                 <a href="#">Смотреть работу</a>
-                 </div>
-                 
-             </div>
-             <!-- /.col-6 -->
-         </div>
-         <!-- /.row -->
-        </div>
-    </div>
-    
- </section>
+			<!-- Усложненный вариант, раскомментируйте его, если хотите выполнить -->
+			<!--
+			<div class="person construct">
+				<div id="person-skin" class="person-skin"></div>
+				<div id="person-clothes" class="person-clothes"></div>
+				<div id="person-hair" class="person-hair"></div>
+				<div class="person-shoes"></div>
+			</div>
+			-->
+			<div id="ready" class="btn">готово</div>
+		</div>
 
- <footer>
-     <div class="container">
-         <div class="row">
-             <div class="col-md-4">
-               <div class="kontakt-block">
-                    <h4 class="footer-auther">Акунишников Алексей</h4> 
-                <p class="footer-text">Разработка сайтов под ключ</p>
-             </div>
-               </div>
-             <div class="col-md-4">
-                 <div class="sociol-block">
-                     <p>Подпишитесь:</p>
-                     <a href="#"><img class="wow zoomIn" data-wow-delay="0.1s" src="img/social/facebook-logo.png" alt="Facebook"></a>
-                     <a href="#"><img class="wow zoomIn" data-wow-delay="0.1s" src="img/social/telegram-logo.png" alt="Telegram"></a>
-                     <a href="https://vk.com/id318274835"><img class="wow zoomIn" data-wow-delay="0.1s" src="img/social/vk-logo.png" alt="Вконтакте"></a>
-                     <a href="#"><img class="wow zoomIn" data-wow-delay="0.1s" src="img/social/youtybe-logo.png" alt="YouTube"></a>
-                 </div>
-             </div>
-             <div class="col-md-4">
-               <div class="footer-cta-block">
-                   <p class="footer-cta">Напишите мне:</p>
-               <a href="https://vk.com/id318274835" class="footer-button">Написать</a>
-               </div>  
-             </div>
-         </div>
-     </div>
+		<div class="custom-style">
 
- </footer>
+			<div class="custom-style-easy">
+				<div class="prev">
+					<i class="flaticon-left-arrow"></i>
+				</div>
+				<div class="preview"></div>
+				<div class="next">
+					<i class="flaticon-right-arrow"></i>
+				</div>
+			</div>
 
-<script src="js/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
+
+			<!-- Усложненный вариант, раскомментируйте его, если хотите выполнить -->
+
+			<!--
+			<div class="style-text">
+				Выберите цвет кожи
+			</div>
+			<div class="skin">
+				<div class="prev">
+					<i class="flaticon-left-arrow"></i>
+				</div>
+					<div class="skin-color skin-color-1"></div>
+					<div class="skin-color skin-color-2"></div>
+					<div class="skin-color skin-color-3"></div>
+				<div class="next">
+					<i class="flaticon-right-arrow"></i>
+				</div>
+			</div>
+			<div class="style-text">
+				Выберите прическу
+			</div>
+			<div class="hair">
+				<div class="prev">
+					<i class="flaticon-left-arrow"></i>
+				</div>
+					<div class="hair-style hair-style-1"></div>
+					<div class="hair-style hair-style-2"></div>
+					<div class="hair-style hair-style-3"></div>
+					<div class="hair-style hair-style-4"></div>
+					<div class="hair-style hair-style-5"></div>
+					<div class="hair-style hair-style-6"></div>
+				<div class="next">
+					<i class="flaticon-right-arrow"></i>
+				</div>
+			</div>
+			<div class="style-text">
+				Выберите одежду
+			</div>
+			<div class="clothes">
+				<div class="prev">
+					<i class="flaticon-left-arrow"></i>
+				</div>
+					<div class="clothes-style clothes-style-1"></div>
+					<div class="clothes-style clothes-style-2"></div>
+					<div class="clothes-style clothes-style-3"></div>
+					<div class="clothes-style clothes-style-4"></div>
+					<div class="clothes-style clothes-style-5"></div>
+					<div class="clothes-style clothes-style-6"></div>
+				<div class="next">
+					<i class="flaticon-right-arrow"></i>
+				</div>
+			</div>
+		-->
+		</div>
+	</div>
+
+	<script src="js/common.js"></script>
+
 </body>
 </html>
