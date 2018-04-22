@@ -10,7 +10,7 @@ let overlay = document.getElementsByClassName('overlay')[0],
     custom_style = document.getElementsByClassName('custom-style')[0];
 
 
-    popup_btn.addEventListener('click', function() {
+     function custem() {
     	overlay.style.display = 'none';
     	main.style.display = 'none';
 
@@ -26,10 +26,34 @@ let overlay = document.getElementsByClassName('overlay')[0],
         custom_char.classList.add("animated");
         custom_char.classList.add("fadeInDown");
 
-           
+
+                  // cleaning the form
+                      if (window.performance) {
+                       name.value = '';
+                       age.value = '';
+                      // bio.value = '';
+                       female.checked = true;
+                       select.value = 'Либеральные';
+                       textBio.value = '';
+
+                        };
+
+        if (male.checked) {
+               person_easy.style.background = x[0];
+               person_easy.style.backgroundSize = "contain";
+               preview.style.background = `#f2f2f2 ${x[0]}`;
+               preview.style.backgroundSize = "contain";
+        } else if (female.checked) { 
+             person_easy.style.background = y[0];
+             person_easy.style.backgroundSize = "contain";
+             preview.style.background = `#f2f2f2 ${y[0]}`;
+             preview.style.backgroundSize = "contain";
+        };
 
 
-    });
+
+    };
+
 
   
 // Customization
@@ -52,16 +76,7 @@ let ready = document.getElementById('ready'),
     preview = document.querySelector('.preview'),
     photo = document.getElementsByClassName('photo');
 
-                    // cleaning the form
-                      if (window.performance) {
-                       name.value = '';
-                       age.value = '';
-                      // bio.value = '';
-                       female.checked = true;
-                       select.value = 'Либеральные';
-                       textBio.value = '';
-
-                        };
+                  
  
       let y = [];
         for (let i = 0; i < 4; i++) {
@@ -76,18 +91,7 @@ let ready = document.getElementById('ready'),
                      
         };
 
-        if (male.checked) {
-               person_easy.style.background = x[0];
-               person_easy.style.backgroundSize = "contain";
-               preview.style.background = `#f2f2f2 ${x[0]}`;
-               preview.style.backgroundSize = "contain";
-        } else if (female.checked) { 
-             person_easy.style.background = y[0];
-             person_easy.style.backgroundSize = "contain";
-             preview.style.background = `#f2f2f2 ${y[0]}`;
-             preview.style.backgroundSize = "contain";
-        };
-
+       
 
         sexRadio.addEventListener('change', function(event) {
                 if (event.target && event.target.matches('input#male')) {
@@ -104,6 +108,12 @@ let ready = document.getElementById('ready'),
 
         });   
 
+
+    popup_btn.addEventListener('click', function() {
+    custem();
+ });
+
+
 // Slider
     
     let slideIndex = 0,
@@ -118,7 +128,7 @@ let ready = document.getElementById('ready'),
                     person_easy.style.backgroundSize = "contain";
                     preview.style.background = `#f2f2f2 ${y[slideIndex]}`;
                     preview.style.backgroundSize = "contain";
-                    console.log(slideIndex);
+                    
                 } 
 
 
@@ -127,7 +137,7 @@ let ready = document.getElementById('ready'),
                     person_easy.style.backgroundSize = "contain";
                     preview.style.background = `#f2f2f2 ${x[slideIndex]}`;
                     preview.style.backgroundSize = "contain";
-                    console.log(slideIndex);
+                    
                  } 
         
     
@@ -187,6 +197,7 @@ let ready = document.getElementById('ready'),
         
 
 // Application сustomization
+   
 
        ready.addEventListener('click', function() {
             custom_overlay.style.display = 'none';
@@ -196,9 +207,13 @@ let ready = document.getElementById('ready'),
             main.style.display = 'block';
             
 
+   
+
         let myMain = main_cards[1].cloneNode(true);
             overlay_cards.appendChild(myMain); 
             myMain.classList.add('myMain');
+                   
+        
 
         let nameCards = myMain.getElementsByClassName('name')[0],
             ageCards = myMain.getElementsByClassName('age')[0],
@@ -240,7 +255,43 @@ let ready = document.getElementById('ready'),
             views.textContent = select.value;
             bio.textContent = textBio.value;
 
+            // progress bar 0
+
+            let progress_bar = document.querySelectorAll('.progress-bar');
+                cards_one = document.getElementsByClassName('main-cards-item')[0],
+                cards_two = document.getElementsByClassName('main-cards-item')[1],
+                cards_three = document.getElementsByClassName('main-cards-item')[2],
+
+                result_cards_one = cards_one.getElementsByClassName('result-count')[0],
+                result_cards_two = cards_two.getElementsByClassName('result-count')[0],
+                result_cards_three = cards_three.getElementsByClassName('result-count')[0],
+                 
+                result_one = '0%',
+                result_two = '0%',
+                result_three = '0%';
+
+            progress_bar[0].style.height = result_one;
+            progress_bar[1].style.height = result_two;
+            progress_bar[2].style.height = result_three;
+
+            result_cards_one.innerHTML = result_one;
+            result_cards_two.innerHTML = result_two;
+            result_cards_three.innerHTML = result_three;
+
 
         });
+
+// reser result
+
+let reset_btn = document.getElementById('reset');
+
+    reset_btn.addEventListener('click', function() {
+     let   myMainDelete = document.getElementsByClassName('main-cards-item')[2];
+           myMainDelete.parentNode.removeChild(myMainDelete);
+            custem();
+      
+    });
+
+
 
 });
