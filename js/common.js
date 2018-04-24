@@ -197,9 +197,34 @@ let ready = document.getElementById('ready'),
         
 
 // Application сustomization
+
+name.oninput = function() {
+     if (name.value.match(/\d/g)) {
+        alert('Введите только буквы');
+        name.value = '';
+    }
+}
+
+age.oninput = function() {
+     if (Number.isNaN(parseInt(age.value)) || age.value.length > 2)  {
+        alert('Введите только двух значное число');
+        age.value = '';
+    }
+}
+
+ textBio.oninput = function() {
+     if ( textBio.value.match(/\d/g)) {
+        alert('Введите только буквы');
+        textBio.value = '';
+    }
+}
+
    
 
        ready.addEventListener('click', function() {
+
+       if (name.value.replace(/[0-9]+$/,'') && age.value.match(/\d/g) && (age.value.match(/\d/g)).length < 3 && textBio.value !== '') {
+
             custom_overlay.style.display = 'none';
             custom_info.style.display = 'none';
             custom_char.style.display = 'none';
@@ -244,7 +269,15 @@ let ready = document.getElementById('ready'),
                 
 
             nameCards.textContent = name.value;
-            ageCards.textContent = age.value;
+            if (age.value[1] == 2 || age.value[1] == 3 || age.value[1] == 4) {
+            ageCards.textContent = age.value + ' года';
+            } else
+
+            if (age.value[1] == 1 ) {
+            ageCards.textContent = age.value + ' год';
+            } else ageCards.textContent = age.value + ' лет';
+
+           
             
                 if (male.checked) {
                     sex.textContent = male.value;
@@ -257,7 +290,7 @@ let ready = document.getElementById('ready'),
 
             // progress bar 0
 
-            let progress_bar = document.querySelectorAll('.progress-bar');
+            let progress_bar = document.querySelectorAll('.progress-bar'),
                 cards_one = document.getElementsByClassName('main-cards-item')[0],
                 cards_two = document.getElementsByClassName('main-cards-item')[1],
                 cards_three = document.getElementsByClassName('main-cards-item')[2],
@@ -276,7 +309,11 @@ let ready = document.getElementById('ready'),
 
             result_cards_one.innerHTML = result_one;
             result_cards_two.innerHTML = result_two;
-            result_cards_three.innerHTML = result_three;
+            result_cards_three.innerHTML = result_three; }
+
+            else {
+                alert('Проверте правельность заполнение данных о кандидете!')
+            }
 
 
         });
@@ -290,6 +327,76 @@ let reset_btn = document.getElementById('reset');
            myMainDelete.parentNode.removeChild(myMainDelete);
             custem();
       
+    });
+
+
+
+let voting_btn = document.getElementById('voting'),
+    crime_btn = document.getElementById('crime'),
+     result_one = 28,
+     result_two = 34,
+     result_three = 41;
+
+    voting_btn.addEventListener('click', function() {
+
+       let  progress_bar = document.querySelectorAll('.progress-bar'),
+            cards_one = document.getElementsByClassName('main-cards-item')[0],
+            cards_two = document.getElementsByClassName('main-cards-item')[1],
+            cards_three = document.getElementsByClassName('main-cards-item')[2],
+
+            result_cards_one = cards_one.getElementsByClassName('result-count')[0],
+            result_cards_two = cards_two.getElementsByClassName('result-count')[0],
+            result_cards_three = cards_three.getElementsByClassName('result-count')[0],
+
+            result_one = 28,
+            result_two = 34,
+            result_three = 38;
+
+            progress_bar[0].style.height = result_one + '%';
+            progress_bar[1].style.height = result_two + '%';
+            progress_bar[2].style.height = result_three + '%';
+
+            result_cards_one.innerHTML = result_one + '%';
+            result_cards_two.innerHTML = result_two + '%';
+            result_cards_three.innerHTML = result_three + '%';
+
+    });
+
+    crime_btn.addEventListener('click', function() {
+
+         let progress_bar = document.querySelectorAll('.progress-bar'),
+            cards_one = document.getElementsByClassName('main-cards-item')[0],
+            cards_two = document.getElementsByClassName('main-cards-item')[1],
+            cards_three = document.getElementsByClassName('main-cards-item')[2],
+
+            result_cards_one = cards_one.getElementsByClassName('result-count')[0],
+            result_cards_two = cards_two.getElementsByClassName('result-count')[0],
+            result_cards_three = cards_three.getElementsByClassName('result-count')[0],
+
+            result_one = 28,
+            result_two = 34,
+            result_three = 38;
+
+        if (parseInt(progress_bar[0].style.height) > 0 ) {
+            result_one = result_one - 12;
+            result_two = result_two - 13;
+            result_three = result_three +25;
+        } else {
+            result_one = 0;
+            result_two = 0;
+            result_three = 25;
+        }
+
+          progress_bar[0].style.height = result_one + '%';
+            progress_bar[1].style.height = result_two + '%';
+            progress_bar[2].style.height = result_three + '%';
+
+            result_cards_one.innerHTML = result_one + '%';
+            result_cards_two.innerHTML = result_two + '%';
+            result_cards_three.innerHTML = result_three + '%';
+
+
+
     });
 
 
