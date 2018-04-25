@@ -384,11 +384,11 @@ let voting_btn = document.getElementById('voting'),
         if (parseInt(progress_bar[0].style.height) > 0 ) {
             result_one = result_one - 12;
             result_two = result_two - 13;
-            result_three = result_three +25;
+            result_three = result_three + 25;
         } else {
-            result_one = 0;
-            result_two = 0;
-            result_three = 25;
+            result_one = 16;
+            result_two = 21;
+            result_three = 63;
         }
 
           progress_bar[0].style.height = result_one + '%';
