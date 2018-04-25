@@ -76,8 +76,7 @@ let ready = document.getElementById('ready'),
     preview = document.querySelector('.preview'),
     photo = document.getElementsByClassName('photo');
 
-                  
- 
+       
       let y = [];
         for (let i = 0; i < 4; i++) {
             y[i] = `url(img/construct-${i+1}.png) center no-repeat`;
@@ -198,6 +197,11 @@ let ready = document.getElementById('ready'),
 
 // Application сustomization
 
+
+name.setAttribute( "placeholder", "Иванов Иван Петрович");
+age.setAttribute("placeholder", "возраст от 35 до 80");
+
+
 name.oninput = function() {
      if (name.value.match(/\d/g)) {
         alert('Введите только буквы');
@@ -223,7 +227,7 @@ age.oninput = function() {
 
        ready.addEventListener('click', function() {
 
-       if (name.value.replace(/[0-9]+$/,'') && age.value.match(/\d/g) && (age.value.match(/\d/g)).length < 3 && textBio.value !== '') {
+       if (name.value.replace(/[0-9]+$/,'') && age.value.match(/\d/g) && (age.value.match(/\d/g)).length < 3 && parseInt(age.value) > 35 && parseInt(age.value) < 80 && textBio.value !== '') {
 
             custom_overlay.style.display = 'none';
             custom_info.style.display = 'none';
